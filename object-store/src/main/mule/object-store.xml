@@ -19,6 +19,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 			<os:value ><![CDATA[#[vars.id]]]></os:value>
 		</os:store>
 		<logger level="INFO" doc:name="Logger" doc:id="43f61b42-b816-414e-acdb-d3a9df7b381b" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="6fbb5b31-4b69-4b08-a246-0455220dd3d9" message="flow ended"/>
 	</flow>
 	<flow name="object-storeFlow1" doc:id="79fafe43-0897-4605-a9e3-4f06456d7757" >
 		<http:listener doc:name="Listener" doc:id="385cae21-04bf-44de-a6b6-3d2b614fe4b7" config-ref="HTTP_Listener_config" path="/getdata"/>
