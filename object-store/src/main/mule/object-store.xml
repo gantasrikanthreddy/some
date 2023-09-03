@@ -13,6 +13,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="object-storeFlow" doc:id="ef2d717b-b80e-49c9-b911-6e49c7d88f4c" >
 		<http:listener doc:name="Listener" doc:id="b41fadf4-c97e-4820-b75e-3cc6e7c60dca" config-ref="HTTP_Listener_config" path="/store"/>
 		<logger level="INFO" doc:name="Logger" doc:id="7a868f04-b508-4e90-8aa2-0ecb1a53f0ec" message="flow started" />
+		<logger level="INFO" doc:name="Logger" doc:id="6107849d-381d-4d01-b4b9-c90d6640c342" message="logger-2"/>
 		<set-variable value="#[attributes.queryParams.name]" doc:name="Set Variable" doc:id="ab465a74-14f2-4f05-bfe0-226dd11b8824" variableName="name"/>
 		<set-variable value="#[attributes.queryParams.id]" doc:name="Set Variable" doc:id="72bcb175-6d37-4307-ac38-4241caed6d3b" variableName="id"/>
 		<os:store doc:name="Store" doc:id="68846f02-7385-42c2-84ec-96b360f103a8" key="#[vars.name]" objectStore="Object_store">
